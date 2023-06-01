@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TRPOModelContainer" CdmEntityContainer="TRPOEntities">
+    <EntitySetMapping Name="Auditory">
+      <EntityTypeMapping TypeName="TRPOModel.Auditory">
+        <MappingFragment StoreEntitySet="Auditory">
+          <ScalarProperty Name="ID_Auditory" ColumnName="ID_Auditory" />
+          <ScalarProperty Name="Auditory_Number" ColumnName="Auditory_Number" />
+          <ScalarProperty Name="Status_Name" ColumnName="Status_Name" />
+          <ScalarProperty Name="Last_Change_Date" ColumnName="Last_Change_Date" />
+          <ScalarProperty Name="Capasity" ColumnName="Capasity" />
+          <ScalarProperty Name="Inventory_ID" ColumnName="Inventory_ID" />
+          <ScalarProperty Name="Sotrudnik_ID" ColumnName="Sotrudnik_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Auditory">
+      <EntityTypeMapping TypeName="TRPOModel.View_Auditory">
+        <MappingFragment StoreEntitySet="View_Auditory">
+          <ScalarProperty Name="Код_аудитории" ColumnName="Код аудитории" />
+          <ScalarProperty Name="Номер_аудитории" ColumnName="Номер аудитории" />
+          <ScalarProperty Name="Вместимость" ColumnName="Вместимость" />
+          <ScalarProperty Name="Статус" ColumnName="Статус" />
+          <ScalarProperty Name="Дата_последнего_изменения" ColumnName="Дата последнего изменения" />
+          <ScalarProperty Name="Фамилия_изменившего" ColumnName="Фамилия изменившего" />
+          <ScalarProperty Name="Имя_изменившего" ColumnName="Имя изменившего" />
+          <ScalarProperty Name="Отчество_изменившего" ColumnName="Отчество изменившего" />
+          <ScalarProperty Name="Номер_телефона" ColumnName="Номер телефона" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="Название_инвентаря" ColumnName="Название инвентаря" />
+          <ScalarProperty Name="Описание_инвентаря" ColumnName="Описание инвентаря" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

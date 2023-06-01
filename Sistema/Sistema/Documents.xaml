@@ -1,0 +1,18 @@
+﻿<Window x:Class="Sistema.Documents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema"
+        mc:Ignorable="d"
+        Title="Documents" Height="450" Width="800">
+    <Grid>
+        <ComboBox Name="Statuses" Margin="0,0,600,350" SelectionChanged="Statuses_SelectionChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11"/>
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Выход" Name="Exit" Margin="650,0,0,375" Click="Exit_Click" RenderTransformOrigin="0.381,1.483"/>
+       
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Скачать" Name="Load" Margin="294,8,356,367"  RenderTransformOrigin="0.381,1.483" Click="Load_Click"/>
+
+        <DataGrid Background="LightGray" Margin="0,180,0,0" Name="tablica"></DataGrid>
+        
+    </Grid>
+</Window>

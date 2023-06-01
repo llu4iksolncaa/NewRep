@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TRPOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Auditory">
+    <Key>
+      <PropertyRef Name="ID_Auditory" />
+      <PropertyRef Name="Auditory_Number" />
+      <PropertyRef Name="Status_Name" />
+      <PropertyRef Name="Last_Change_Date" />
+      <PropertyRef Name="Capasity" />
+      <PropertyRef Name="Inventory_ID" />
+      <PropertyRef Name="Sotrudnik_ID" />
+    </Key>
+    <Property Name="ID_Auditory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Auditory_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Change_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Capasity" Type="Int32" Nullable="false" />
+    <Property Name="Inventory_ID" Type="Int32" Nullable="false" />
+    <Property Name="Sotrudnik_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Auditory">
+    <Key>
+      <PropertyRef Name="Код_аудитории" />
+      <PropertyRef Name="Номер_аудитории" />
+      <PropertyRef Name="Вместимость" />
+      <PropertyRef Name="Статус" />
+      <PropertyRef Name="Дата_последнего_изменения" />
+      <PropertyRef Name="Фамилия_изменившего" />
+      <PropertyRef Name="Имя_изменившего" />
+      <PropertyRef Name="Номер_телефона" />
+      <PropertyRef Name="Должность" />
+      <PropertyRef Name="Название_инвентаря" />
+      <PropertyRef Name="Описание_инвентаря" />
+      <PropertyRef Name="Количество" />
+    </Key>
+    <Property Name="Код_аудитории" Type="Int32" Nullable="false" />
+    <Property Name="Номер_аудитории" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Вместимость" Type="Int32" Nullable="false" />
+    <Property Name="Статус" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Дата_последнего_изменения" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Фамилия_изменившего" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Имя_изменившего" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Отчество_изменившего" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Номер_телефона" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Должность" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Название_инвентаря" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Описание_инвентаря" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Количество" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TRPOEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auditory" EntityType="Self.Auditory" />
+    <EntitySet Name="View_Auditory" EntityType="Self.View_Auditory" />
+  </EntityContainer>
+</Schema>

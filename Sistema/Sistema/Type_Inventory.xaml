@@ -1,0 +1,24 @@
+﻿<Window x:Class="Sistema.Type_Inventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema"
+        mc:Ignorable="d"
+        Title="Type_Inventory" Height="450" Width="800">
+    <Grid>
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Выход" Name="Exit" Margin="650,0,0,375"  RenderTransformOrigin="0.381,1.483" Click="Exit_Click"/>
+
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Наименование" Background="LightGray" Margin="0,0,650,375"  />
+        <TextBox Background="LightGray" Margin="0,75,650,300" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Text="Ноутбук Hp" Name="name"/>
+
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Описание" Background="LightGray" Margin="220,0,430,380"  />
+        <TextBox Background="LightGray" Margin="220,75,215,300" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Text="Комплектующие ..." Name="opisanie"/>
+
+        <Button Content="Добавить" Name="Add" Margin="0,158,650,217" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Click="Add_Click" />
+        <Button Content="Изменить" Name="Chg" Margin="220,158,430,217" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Click="Chg_Click" />
+        <Button Content="Удалить" Name="Del" Margin="440,158,215,217" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Click="Del_Click" />
+
+        <DataGrid Background="LightGray" Margin="0,250,0,0" Name="tablica"></DataGrid>
+    </Grid>
+</Window>

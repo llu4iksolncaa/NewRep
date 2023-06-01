@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище TRPOModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "TRPO.dbo.Auditory" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Auditory">
+    <Key>
+      <PropertyRef Name="ID_Auditory" />
+      <PropertyRef Name="Auditory_Number" />
+      <PropertyRef Name="Status_Name" />
+      <PropertyRef Name="Last_Change_Date" />
+      <PropertyRef Name="Capasity" />
+      <PropertyRef Name="Inventory_ID" />
+      <PropertyRef Name="Sotrudnik_ID" />
+    </Key>
+    <Property Name="ID_Auditory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Auditory_Number" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Status_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Last_Change_Date" Type="datetime" Nullable="false" />
+    <Property Name="Capasity" Type="int" Nullable="false" />
+    <Property Name="Inventory_ID" Type="int" Nullable="false" />
+    <Property Name="Sotrudnik_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "TRPO.dbo.View_Auditory" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="View_Auditory">
+    <Key>
+      <PropertyRef Name="Код аудитории" />
+      <PropertyRef Name="Номер аудитории" />
+      <PropertyRef Name="Вместимость" />
+      <PropertyRef Name="Статус" />
+      <PropertyRef Name="Дата последнего изменения" />
+      <PropertyRef Name="Фамилия изменившего" />
+      <PropertyRef Name="Имя изменившего" />
+      <PropertyRef Name="Номер телефона" />
+      <PropertyRef Name="Должность" />
+      <PropertyRef Name="Название инвентаря" />
+      <PropertyRef Name="Описание инвентаря" />
+      <PropertyRef Name="Количество" />
+    </Key>
+    <Property Name="Код аудитории" Type="int" Nullable="false" />
+    <Property Name="Номер аудитории" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Вместимость" Type="int" Nullable="false" />
+    <Property Name="Статус" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Дата последнего изменения" Type="datetime" Nullable="false" />
+    <Property Name="Фамилия изменившего" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Имя изменившего" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Отчество изменившего" Type="varchar" MaxLength="255" />
+    <Property Name="Номер телефона" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Должность" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Название инвентаря" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Описание инвентаря" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Количество" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище TRPOModelContainer">
+    <EntitySet Name="Auditory" EntityType="Self.Auditory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Auditory].[ID_Auditory] AS [ID_Auditory], 
+    [Auditory].[Auditory_Number] AS [Auditory_Number], 
+    [Auditory].[Status_Name] AS [Status_Name], 
+    [Auditory].[Last_Change_Date] AS [Last_Change_Date], 
+    [Auditory].[Capasity] AS [Capasity], 
+    [Auditory].[Inventory_ID] AS [Inventory_ID], 
+    [Auditory].[Sotrudnik_ID] AS [Sotrudnik_ID]
+    FROM [dbo].[Auditory] AS [Auditory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_Auditory" EntityType="Self.View_Auditory" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Auditory].[Код аудитории] AS [Код аудитории], 
+    [View_Auditory].[Номер аудитории] AS [Номер аудитории], 
+    [View_Auditory].[Вместимость] AS [Вместимость], 
+    [View_Auditory].[Статус] AS [Статус], 
+    [View_Auditory].[Дата последнего изменения] AS [Дата последнего изменения], 
+    [View_Auditory].[Фамилия изменившего] AS [Фамилия изменившего], 
+    [View_Auditory].[Имя изменившего] AS [Имя изменившего], 
+    [View_Auditory].[Отчество изменившего] AS [Отчество изменившего], 
+    [View_Auditory].[Номер телефона] AS [Номер телефона], 
+    [View_Auditory].[Должность] AS [Должность], 
+    [View_Auditory].[Название инвентаря] AS [Название инвентаря], 
+    [View_Auditory].[Описание инвентаря] AS [Описание инвентаря], 
+    [View_Auditory].[Количество] AS [Количество]
+    FROM [dbo].[View_Auditory] AS [View_Auditory]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

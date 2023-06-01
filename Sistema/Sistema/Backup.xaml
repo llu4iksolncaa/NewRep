@@ -1,0 +1,24 @@
+﻿<Window x:Class="Sistema.Backup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema"
+        mc:Ignorable="d"
+        Title="Backup" Height="450" Width="800">
+    <Grid>
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Выход" Name="Exit" Margin="650,0,0,375" Click="Exit_Click" RenderTransformOrigin="0.381,1.483"/>
+
+
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Cписок скриптов" Background="LightGray" Margin="0,0,650,375"  />
+
+        <ListBox Background="LightGray" Margin="0,75,650,200" x:Name="Scripts"/>
+
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Скачать скрипт" Name="Load" Margin="230,75,440,300" Click="Load_Click" />
+
+        <Button  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="11" Content="Загрузить" Name="Push" Margin="230,175,440,200" Click="Push_Click" />
+
+
+
+    </Grid>
+</Window>
